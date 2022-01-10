@@ -18,5 +18,9 @@ augroup FugiState
 augroup END
 
 function! FugiState()
-  return fugistate#filename_status()
+  return fugistate#file()
+endfunction
+
+function! FugiStateGitDir()
+  return fugistate#gitdir()
 endfunction

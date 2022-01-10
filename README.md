@@ -10,6 +10,12 @@ This simple plugin provides a function which returns the name of current file wi
 
 It will show something like `main.c [ M]` for modified file `main.c`.
 
+```vim
+:echo FugiStateGitDir()
+```
+
+This will show changes, new and unversioned files, e.g. `1 change, 2 new, 3 unversioned`.
+
 For example, to show the filename with git status using [lightline.vim](https://github.com/itchyny/lightline.vim),
 configure as follows.
 
