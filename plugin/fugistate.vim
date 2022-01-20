@@ -11,6 +11,18 @@ if ! exists('g:fugistate_expand_filename')
   let g:fugistate_expand_filename = '%:t'
 endif
 
+if ! exists('g:fugistate_label_changed')
+  let g:fugistate_label_changed = 'changed'
+endif
+
+if ! exists('g:fugistate_label_new')
+  let g:fugistate_label_new = 'new'
+endif
+
+if ! exists('g:fugistate_label_unversioned')
+  let g:fugistate_label_unversioned = 'unversioned'
+endif
+
 augroup FugiState
   autocmd!
   autocmd BufEnter,BufWritePost,FocusGained * :call fugistate#update()

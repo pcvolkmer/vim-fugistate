@@ -14,7 +14,7 @@ It will show something like `main.c [ M]` for modified file `main.c`.
 :echo FugiStateGitDir()
 ```
 
-This will show changes, new and unversioned files, e.g. `1 change, 2 new, 3 unversioned`.
+This will show changes, new and unversioned files, e.g. `1 changed, 2 new, 3 unversioned`.
 
 For example, to show the filename with git status using [lightline.vim](https://github.com/itchyny/lightline.vim),
 configure as follows.
@@ -36,6 +36,16 @@ let g:lightline = {
 The plugin provides `g:fugistate_expand_filename` to modify the value the filename should be expanded to.
 Default value is set to `'%:t'` and will show filename without path. Use available values like `'%:p'` for full path
 or `''` to use `@%` for directory/filename relative to current working directory.
+
+### Labels
+
+If you want other labels than `changed`, `new` and `unversioned`, add this to your vim config.
+
+```vim
+let g:fugistate_label_changed = '✹'
+let g:fugistate_label_new = '✚'
+let g:fugistate_label_unversioned = '★'
+```
 
 ## License
 This software is released under the MIT License, see LICENSE.

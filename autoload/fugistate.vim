@@ -53,20 +53,16 @@ function! fugistate#gitdir()
 
   let s:out = []
 
-  if s:changed == 1
-    call add(s:out, "1 change")
-  endif
-
-  if s:changed > 1
-    call add(s:out, s:changed . " changes")
+  if s:changed > 0
+    call add(s:out, s:changed . " " . g:fugistate_label_changed)
   endif
 
   if s:new > 0
-    call add(s:out, s:new . " new")
+    call add(s:out, s:new . " " . g:fugistate_label_new)
   endif
 
   if s:unversioned > 0
-    call add(s:out, s:unversioned . " unversioned")
+    call add(s:out, s:unversioned . " " . g:fugistate_label_unversioned)
   endif
 
   return join(s:out, ', ')
