@@ -23,10 +23,12 @@ configure as follows.
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filenamestatus', 'modified' ] ]
+      \             [ 'readonly', 'filenamestatus', 'modified' ],
+      \             [ 'gitdirstatus' ] ]
       \ },
       \ 'component_function': {
-      \   'filenamestatus': 'FugiState'
+      \   'filenamestatus': 'FugiState',
+      \   'gitdirstatus': 'FugiStateGitDir'
       \ },
       \ }
 ```
