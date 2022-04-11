@@ -4,6 +4,8 @@
 This simple plugin provides a function which returns the name of current file with git status if available using
 [vim-fugitive](https://github.com/tpope/vim-fugitive) and is intended for statusline integration.
 
+It is required to install vim-fugitive to use this plugin.
+
 ```vim
 :echo FugiState()
 ```
